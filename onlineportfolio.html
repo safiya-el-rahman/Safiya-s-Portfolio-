@@ -23,6 +23,7 @@ body {
     color: var(--dark);
 }
 
+/* NAV */
 nav {
     position: sticky;
     top: 0;
@@ -130,4 +131,133 @@ th {
 }
 
 .contact-box {
-    background: var(
+    background: var(--teal-light);
+    padding: 15px;
+    border-left: 5px solid var(--gold);
+    border-radius: 10px;
+}
+
+ul { line-height: 1.8; }
+</style>
+</head>
+
+<body>
+
+<div class="star" style="top:10%; left:5%;">✦</div>
+<div class="star" style="top:25%; left:80%;">✦</div>
+<div class="star" style="top:70%; left:10%;">✦</div>
+<div class="star" style="top:60%; left:85%;">✦</div>
+
+<nav>
+<button onclick="showPage('about')">About Me</button>
+<button onclick="showPage('projects')">Projects</button>
+<button onclick="showPage('resume')">Resume</button>
+<button onclick="showPage('contact')">Contact</button>
+</nav>
+
+<main>
+
+<section id="about" class="page active">
+<h1>About Me</h1>
+
+<p>
+My name is <strong>Safiya El-Rahman</strong>, and I am a high school student passionate about computer science, healthcare innovation, and using technology to solve real-world problems. I enjoy learning how code can be used to improve systems that people rely on every day.
+</p>
+
+<h2>Interest in Technology</h2>
+<p>
+I first became interested in computer science after noticing how inefficient healthcare paperwork and organization systems can be. This inspired me to explore programming and learn how digital tools can improve accuracy, speed, and accessibility in medical environments.
+</p>
+
+<h2>Skills & Strengths</h2>
+<ul>
+<li>Problem-solving and logical thinking</li>
+<li>Beginner to intermediate Python programming</li>
+<li>HTML, CSS, and basic JavaScript development</li>
+<li>Teamwork and collaboration through school and volunteering</li>
+</ul>
+
+<h2>Leadership & Community Impact</h2>
+<p>
+As a Girl Scout and active volunteer, I have participated in organizing community service events, including an art program for children with special needs. These experiences helped me develop leadership skills, patience, and the ability to work with diverse groups of people.
+</p>
+
+<h2>Future Goals</h2>
+<p>
+I hope to pursue biomedical engineering and computer science in college so I can design tools and systems that improve healthcare efficiency, patient care, and access to medical resources worldwide.
+</p>
+</section>
+
+<section id="projects" class="page">
+<h1>My Projects</h1>
+
+<div class="project">
+<h2>3.2.2 Star Wars Data Project</h2>
+<table>
+<tr><th>Description</th><td>Used Python lists and loops to organize Star Wars data.</td></tr>
+<tr><th>Skills</th><td>Python, loops, debugging</td></tr>
+</table>
+<a class="link" href="#">Open Project</a>
+</div>
+
+<div class="project">
+<h2>Digital Doodle Project</h2>
+<table>
+<tr><th>Description</th><td>Interactive drawing tool using JavaScript and mouse events.</td></tr>
+<tr><th>Skills</th><td>JavaScript, DOM manipulation</td></tr>
+</table>
+<a class="link" href="#">Open Project</a>
+</div>
+
+</section>
+
+<section id="resume" class="page">
+<h1>Resume</h1>
+
+<table>
+<tr><th>Education</th><td>High School Student (Class of 2029)</td></tr>
+<tr><th>School Coursework</th><td>Computer Science Essentials, Introduction to Programming, Web Development Basics</td></tr>
+
+<tr><th>Technical Skills</th><td>
+HTML, CSS, JavaScript (basic), Python (lists, loops, debugging), Machine Learning (Teachable Machine)
+</td></tr>
+
+<tr><th>Projects</th><td>
+Star Wars Data Project (Python), Digital Doodle (JavaScript), Web Portfolio Design
+</td></tr>
+
+<tr><th>Leadership & Activities</th><td>
+Girl Scouts, Community Volunteer, Event Organizer for Special Needs Art Program, School Group Collaboration Projects
+</td></tr>
+
+<tr><th>Awards & Recognition</th><td>
+Community Service Recognition Award, Girl Scout Participation Awards, Academic Effort & Improvement Recognition
+</td></tr>
+
+<tr><th>Interests</th><td>
+Biomedical engineering, artificial intelligence, healthcare technology, app development
+</td></tr>
+</table>
+</section>
+
+<section id="contact" class="page">
+<h1>Contact</h1>
+<div class="contact-box">
+<p><strong>Email 1:</strong> safiya.elrahman@icloud.com</p>
+<p><strong>Email 2:</strong> elrahman9460@mydusd.org</p>
+</div>
+</section>
+
+</main>
+
+<script>
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
+
