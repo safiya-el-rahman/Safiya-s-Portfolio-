@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CS Portfolio</title>
-    
+    <title>Safiya El-Rahman | CS Portfolio</title>
+
     <style>
         :root {
             --light-blue: #e0f2fe;
@@ -13,27 +14,30 @@
             --dark-blue: #0284c7;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--light-blue);
             color: #334155;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             min-height: 100vh;
         }
 
         nav {
             background-color: white;
             width: 100%;
-            padding: 1.5rem 0;
+            padding: 1.5rem;
             display: flex;
             justify-content: center;
             gap: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
+            z-index: 100;
         }
 
         button {
@@ -45,7 +49,7 @@
             font-weight: bold;
             cursor: pointer;
             border-radius: 50px;
-            transition: all 0.2s ease;
+            transition: 0.3s;
         }
 
         button:hover {
@@ -56,13 +60,12 @@
 
         main {
             width: 90%;
-            max-width: 800px;
-            margin-top: 40px;
+            max-width: 1000px;
+            margin: 40px auto;
         }
 
-        /* All pages are hidden by default */
         .page {
-            display: none; 
+            display: none;
             background: white;
             padding: 40px;
             border-radius: 20px;
@@ -70,21 +73,72 @@
             animation: fadeIn 0.5s ease;
         }
 
-        /* Show this specific class via JS */
         .active {
             display: block;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        h1 { color: var(--accent-pink); border-bottom: 2px solid var(--light-blue); padding-bottom: 10px; }
-        h2 { color: var(--dark-blue); }
-        
-        ul { line-height: 1.8; }
-        .contact-info { background: var(--light-blue); padding: 15px; border-radius: 10px; border-left: 5px solid var(--accent-pink); }
+        h1 {
+            color: var(--accent-pink);
+            border-bottom: 2px solid var(--light-blue);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--dark-blue);
+        }
+
+        .project-item {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .project-gif {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            margin: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .project-link {
+            display: inline-block;
+            background: var(--accent-pink);
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            margin-top: 10px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            background: #db2777;
+        }
+
+        .contact-info {
+            background: var(--light-blue);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid var(--accent-pink);
+        }
+
+        ul {
+            line-height: 1.8;
+        }
     </style>
 </head>
 <body>
@@ -97,65 +151,181 @@
     </nav>
 
     <main>
+
+        <!-- ABOUT PAGE -->
         <section id="about" class="page active">
             <h1>About Me</h1>
-            <p>Welcome! My name is Safiya El-Rahman</p>
-            <p> <strong>I am current 9th grader who is getting into the basics of coding. Here is a little bit about me and what I want to accomplish in the future. At my annual check up, watching my dad juggle paperwork and his insurance card made me realize how inefficient healthcare administration can be. A simple digital documentation app could remove much of this hassle. Inspired by my passion for computer science, I want to develop a platform that enables patients and medical professionals to easily manage critical documents, making healthcare more effcient and accessible for everyone. Imagine if we had a digital documentation app, one that seamlessly stores, organize, and manages all you medical information, eliminating the need for stacks of physical forms and endless signatures. This vision inspires me to combine my passion for computer science with the needs of medical field. I believe the world of Biomedical Engineering is ready for a new wave of innovation, and I am determined to be part of that change. Too many people struggle to access basic medical care because of unnecessary obstacles and ineffciencies. Healthcare is a fundemental right, and simplifying the process is essential to reach everyone who needs help. My goal is to design an intuitive digital platform that empowers both patients and medical professionals to securely send, receive, and edit important documents in real time. By leveraging technology, we can create a healthcare experience that is more accessible, efficient, and compassionate for all.
- Being a Girl Scout has given me countless opportunities to develop teamwork, leadership, and compassion, qualities that have become central to who I am. Each year, I help organize and lead an annual art event for children with special needs. Through this experience, I’ve learned the importance of patience, creativity, and genuine empathy. Planning activities, collaborating with fellow Scouts, and adapting to each child’s unique needs has taught me how to communicate effectively and support others. I find great joy in bringing people together to create memorable experiences, and these moments have strengthened my belief in the value of service to other and my community. 
- My dedication to making life easier for others extends beyond these events. Whether I’m volunteering, assisting classmates with their studies, or participating in group projects, I consistently look for ways to help and uplift those around me. These experiences have shown me that my greatest strengths are my ability to connect with people, my willingness to step up when needed, and my commitment to making a positive impact. Working with others and serving my community isn’t just something I do, it’s at the heart of who I am and will continue to guide me in my future career. 
-</strong></p>
+
+            <p>
+                Hello! My name is <strong>Safiya El-Rahman</strong>, and I am a
+                freshman in high school with a growing passion for computer science,
+                technology, and healthcare innovation.
+            </p>
+
+            <h2>My Interest in Technology</h2>
+
+            <p>
+                During a routine doctor's visit, I watched my dad manage paperwork,
+                forms, and insurance documents. It made me realize how inefficient
+                healthcare administration can be. Since then, I have become interested
+                in using technology to improve healthcare systems and make important
+                information easier to manage.
+            </p>
+
+            <p>
+                My goal is to create digital solutions that help patients and medical
+                professionals securely store, share, and organize important documents.
+                I believe technology can make healthcare more efficient, accessible,
+                and user-friendly.
+            </p>
+
+            <h2>Leadership & Community Service</h2>
+
+            <p>
+                As a Girl Scout, I have developed leadership, teamwork, and
+                communication skills. One of my favorite experiences is helping
+                organize an annual art event for children with special needs.
+            </p>
+
+            <p>
+                Through volunteering, group projects, and community service, I have
+                learned the importance of empathy, collaboration, and helping others.
+            </p>
+
+            <h2>Future Goals</h2>
+
+            <p>
+                In the future, I hope to combine computer science and biomedical
+                engineering to create technology that improves healthcare access and
+                simplifies medical processes for people around the world.
+            </p>
         </section>
 
+        <!-- PROJECTS PAGE -->
         <section id="projects" class="page">
             <h1>My Projects</h1>
+
             <div class="project-item">
-                <h2>Project 1: Personal Portfolio</h2>
-                <p>This project helps with identifying different handwritings to help with medical persciption analysis!</p>
-                <a href="https://teachablemachine.withgoogle.com/models/4-VKyiTcF/">Click here to go to Google</a>
+                <h2>Handwriting Recognition for Medical Prescriptions</h2>
+
+                <img src="images/project1.gif"
+                     alt="Project 1 Demo"
+                     class="project-gif">
+
+                <p>
+                    This machine learning project identifies different handwriting
+                    styles and explores how artificial intelligence can help analyze
+                    handwritten medical prescriptions.
+                </p>
+
+                <a class="project-link"
+                   href="https://teachablemachine.withgoogle.com/models/4-VKyiTcF/"
+                   target="_blank">
+                    Open Project
+                </a>
+
+                <a class="project-link"
+                   href="PASTE_GOOGLE_DRIVE_LINK_HERE"
+                   target="_blank">
+                    View Demo
+                </a>
             </div>
-            <hr>
+
             <div class="project-item">
-                <h2>Project 2: Coming Soon</h2>
-                <p>It is a project scanning different medical tools.</p>
+                <h2>Medical Tool Scanner</h2>
+
+                <img src="images/project2.gif"
+                     alt="Project 2 Demo"
+                     class="project-gif">
+
+                <p>
+                    A computer vision project that scans and identifies medical tools
+                    and equipment using image recognition technology.
+                </p>
+
+                <a class="project-link"
+                   href="PASTE_PROJECT_LINK_HERE"
+                   target="_blank">
+                    Open Project
+                </a>
+
+                <a class="project-link"
+                   href="PASTE_GOOGLE_DRIVE_LINK_HERE"
+                   target="_blank">
+                    View Demo
+                </a>
+            </div>
+
+            <div class="project-item">
+                <h2>Future Healthcare Documentation Platform</h2>
+
+                <img src="images/project3.gif"
+                     alt="Project 3 Demo"
+                     class="project-gif">
+
+                <p>
+                    A future project focused on creating a secure digital platform
+                    that simplifies healthcare documentation and record management.
+                </p>
+
+                <p><strong>Currently In Development</strong></p>
             </div>
         </section>
 
+        <!-- RESUME PAGE -->
         <section id="resume" class="page">
             <h1>Resume</h1>
+
             <h2>Education</h2>
-            <p><strong>High School Freshman</strong> | Class of 2029</p>
-            
+            <p>
+                <strong>High School Freshman</strong> | Class of 2029
+            </p>
+
             <h2>Technical Skills</h2>
             <ul>
-                <li>HTML5 & Structure</li>
-                <li>CSS3 Styling (Flexbox, Transitions)</li>
-                <li>Basic JavaScript (Functions, DOM manipulation)</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Basic JavaScript</li>
+                <li>Machine Learning with Teachable Machine</li>
+                <li>Problem Solving</li>
+            </ul>
+
+            <h2>Leadership & Activities</h2>
+            <ul>
+                <li>Girl Scout Member</li>
+                <li>Community Volunteer</li>
+                <li>Annual Art Event Volunteer for Children with Special Needs</li>
+                <li>Interested in Biomedical Engineering and Healthcare Technology</li>
             </ul>
         </section>
 
+        <!-- CONTACT PAGE -->
         <section id="contact" class="page">
             <h1>Contact Me</h1>
-            <p>I'd love to connect with other student developers!</p>
+
+            <p>
+                I would love to connect with other students interested in
+                computer science and technology.
+            </p>
+
             <div class="contact-info">
-                <p><strong>Email:</strong>elrahman9460@mydusd.org</p>
-                <p><strong>GitHub:</strong> @safiya.elrahman</p>
+                <p><strong>Name:</strong> Safiya El-Rahman</p>
+                <p><strong>Email:</strong> elrahman9460@mydusd.org</p>
+                <p><strong>GitHub:</strong> Add your GitHub link here</p>
             </div>
         </section>
+
     </main>
 
     <script>
         function showPage(pageId) {
-            // 1. Find all sections with the class "page"
-            const pages = document.querySelectorAll('.page');
-            
-            // 2. Loop through them and remove the "active" class to hide them
+            const pages = document.querySelectorAll(".page");
+
             pages.forEach(page => {
-                page.classList.remove('active');
+                page.classList.remove("active");
             });
 
-            // 3. Find the specific page clicked and add the "active" class to show it
-            const selectedPage = document.getElementById(pageId);
-            selectedPage.classList.add('active');
+            document.getElementById(pageId).classList.add("active");
         }
     </script>
 
